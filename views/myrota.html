@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="css/css/bootstrap.min.css" rel="stylesheet">
+        
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+        <link href="https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+        <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>MeetUp</title>
+</head>
+<body>
+        <img id ="myRotaLogo"src="../assets/myrota-01.png">
+        <h1 id ="date"></h1>
+    <div class = container>
+        <ul class = "weekdays">
+            <li>Monday</li>
+            <li>Tuesday</li>
+            <li>Wednesday</li>
+            <li>Thursday</li>
+            <li>Friday</li>
+            <li>Saturday</li>
+            <li>Sunday</li>
+        </ul>
+       
+    </div>
+    <h2>This is what your contacts can see</h2>
+    <input type ="submit"id="editMyRota" value="Edit" class ="btn waves-effect waves-light">
+    </div>
+    <input type ="submit"id="saveMyRota" value="Save" class ="btn waves-effect waves-light">
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script><!--END OF SCRIPTS I NEED-->
+<script>
+        var currentDate  = new Date(),
+    currentDay   = currentDate.getDate() < 10 
+                 ? '0' + currentDate.getDate() 
+                 : currentDate.getDate(),
+    currentMonth = currentDate.getMonth() < 9 
+                 ? '0' + (currentDate.getMonth() + 1) 
+                 : (currentDate.getMonth() + 1);
+
+document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
+        </script>
+</html>
